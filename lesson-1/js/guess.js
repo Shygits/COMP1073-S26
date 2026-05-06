@@ -4,7 +4,7 @@
 // STEP 1b: Create variables to represent the three paragraphs above that will contain user feedback
 const guesses = document.querySelector('p#guesses');
 const lastResult = document.querySelector('p#lastResult');
-/* TEST*/
+/* */
 // STEP 1c: Create variables to represent the guessing form
 const guessField = document.querySelector('input#guessField');
 /* */
