@@ -17,34 +17,46 @@ let products = [
 
 // STEP 1d: Declare the itemRow and the itemDetail array;
 let invoiceTotal = 0;
-
-// STEP 
-// 2: Build a loop to iterate through the products array
 let itemRow = new Array();
 let itemDetail = new Array();
 let itemDesc;
 let itemPrice;
 let counter = 0;
 
-	// STEP 3: Break apart the product name from the price for each item with split()
+// STEP 
+// 2: Build a loop to iterate through the products array
+products.forEach((product) => {
 
+	// STEP 3: Break apart the product name from the price for each item with split()
+	product = product.split(": ");
+	//console.log(product);
 
 	// STEP 4: Now we have an array as an element of an array - set the second array element to the product price (as type number)
-
-
+	product[1] = Number(product[1]);
+	//console.log(product);
+	
 	// STEP 5: Add the price of this product to the invoice total
-
+	invoiceTotal += product[1];
+	console.log(invoiceTotal);
 
 	// STEP 6: Capture each product name and price as variables 
+	itemDesc = product[0];
+	itemPrice = product[1];
 
 
 	// STEP 7: Create a TR element for this product and price in the invoice table
-
+	itemRow[counter] = 
+	document.createElement("tr");
 
 	// STEP 8: Build the string that contains two TD elements each containing one of the item description, and the item price
-
+	itemDetail[counter] = `<td>$${itemDesc}</td><td>${itemPrice.toFixed(2)}</td>`;
 
 	// STEP 9: Set the above string as the innerHTML of the new TR element, and then append the new element to the table body (var productList)
+	itemRow[counter].innerHTML = itemDetail[counter];
+	//console.log(itemRow);
+	productList.append(itemRow[counter]);
+	counter++;
+});
 
-
-// STEP 10: Set the total cost of the invoice as the textContent of the TD in the TFOOT (var totalData), rounding the number to two decimal places
+// STEP 10: Set the total cost of the invoice as the textContent of the TD in the TFOOT (var totalData), rounding the number to two decimal places;
+totalData.textContent = $invoiceTotal.toFixed(2);
