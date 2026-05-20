@@ -49,7 +49,7 @@ products.forEach((product) => {
 	document.createElement("tr");
 
 	// STEP 8: Build the string that contains two TD elements each containing one of the item description, and the item price
-	itemDetail[counter] = `<td>$${itemDesc}</td><td>${itemPrice.toFixed(2)}</td>`;
+	itemDetail[counter] = `<td>${itemDesc}</td><td>$${itemPrice.toFixed(2)}</td>`;
 
 	// STEP 9: Set the above string as the innerHTML of the new TR element, and then append the new element to the table body (var productList)
 	itemRow[counter].innerHTML = itemDetail[counter];
