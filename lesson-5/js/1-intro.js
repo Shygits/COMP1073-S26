@@ -1,12 +1,15 @@
 // STEP 1: Build the main entry point for the program
+async function startProgram() {
 
     // STEP 2: Call a method to control the main LED lights
-    
-    // STEP 3: Invoke another method to write to the screen
-    
-    // STEP 3: Call another method to move the robot
-    
-    // STEP 4: Exit the program
-    
+    setMainLed(getRandomColor());
 
-// STEP 5: Aim your robot, then run the program
+    // STEP 3: Invoke another method to write to the screen
+    await scrollMatrixText("Hello World!", getRandomColor(), 24, true);
+
+    // STEP 3: Call another method to move the robot
+    await roll(0, 30, 2); //direction, speed, time
+
+    // STEP 4: Exit the program
+    exitProgram();
+}
