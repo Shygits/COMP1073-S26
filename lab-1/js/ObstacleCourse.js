@@ -10,15 +10,13 @@ async function startProgram() {
 //async function traceSquare() {
 
 
-    await rollToDistance(180, 15, 10);//direction, speed, time
+    await rollToDistance(0, 20, 10);//direction, speed, time
 
+    await rollToDistance(90, 10, 24);//direction, speed, time
 
-    await rollToDistance(90, 10, 34);//direction, speed, time
+    await rollToDistance(90, 10, 15);//direction, speed, time
 
-
-    await rollToDistance(90, 10, 5);//direction, speed, time
-
-    await rollToDistance(0, 5, 120);//direction, speed, time
+    await rollToDistance(0, 25, 30);//direction, speed, time
 
 
 exitProgram();
