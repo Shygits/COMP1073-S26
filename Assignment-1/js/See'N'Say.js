@@ -63,5 +63,37 @@ function playBack() {
                 + column2[index2] + " "
                 + column3[index3] + " "
                 + column4[index4] + " "
-                + column5[index5] + " "
+                + column5[index5] ;
+    alert("Your Story: " + story);
 }
+
+/*Surprise Function
+function surprise() {
+    const story = column1[index1] + " " 
+                + column2[index2] + " "
+                + column3[index3] + " "
+                + column4[index4] + " "
+                + column5[index5] ;
+    alert("Your Story: " + story);
+}
+
+//Reset Function
+function playBack() {
+    const story = column1[index1] + " " 
+                + column2[index2] + " "
+                + column3[index3] + " "
+                + column4[index4] + " "
+                + column5[index5] ;
+    alert("Your Story: " + story);
+}*/
+
+//Event Listeners for buttons
+btton[0].addEventListener("click", changeColumn1);
+btton[0].addEventListener("click", changeColumn1);
+btton[0].addEventListener("click", changeColumn1);
+btton[0].addEventListener("click", changeColumn1);
+btton[0].addEventListener("click", changeColumn1);
+
+btton[0].addEventListener("click", changeColumn1);
+//btton[0].addEventListener("click", changeColumn1);
+//btton[0].addEventListener("click", changeColumn1);
