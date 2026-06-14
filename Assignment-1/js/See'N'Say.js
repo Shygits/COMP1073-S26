@@ -6,7 +6,7 @@ const column4 = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
 const column5 = ["on the moon", "on a chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
 
 //INDEX VARIABLES 
-let index1 = 0;
+let index1 = -1;
 let index2 = 0;
 let index3 = 0;
 let index4 = 0;
@@ -26,32 +26,32 @@ const selection5 = document.getElementById("selection5");
 //CYCLEWORD FUNCTIONS / COLUMN
 function cycleColumn1() {
     index1++;
-    if (index1 >= column1.length) index1 = 0;
-    selection1.textContent = "Column 1: " + column1[index1];   
+    if (index1 >= column1.length) index1 = 0;   
+    selection1.textContent = "Column 1: " + column1[index1];
 }
 
 function cycleColumn2() {
+     selection2.textContent = "Column 2: " + column2[index2];
     index2++;
-    if (index2 >= column2.length) index2 = 0;
-    selection2.textContent = "Column 2: " + column2[index2];   
+    if (index2 >= column2.length) index2 = 0; 
 }
 
 function cycleColumn3() {
+    selection3.textContent = "Column 3: " + column3[index3]; 
     index3++;
     if (index3 >= column3.length) index3 = 0;
-    selection3.textContent = "Column 3: " + column3[index3];   
 }
 
 function cycleColumn4() {
+    selection4.textContent = "Column 4: " + column4[index4];
     index4++;
     if (index4 >= column4.length) index4 = 0;
-    selection4.textContent = "Column 4: " + column4[index4];   
 }
 
 function cycleColumn5() {
+    selection5.textContent = "Column 5: " + column5[index5];
     index5++;
     if (index5 >= column5.length) index5 = 0;
-    selection5.textContent = "Column 5: " + column5[index5];   
 }
 
 //PLAYBACK FUNCTION
@@ -103,5 +103,5 @@ button[5].addEventListener("click", playBack);
 
 
 //RESET AND SURPRISE EVENT LISTENERS
-//button[6].addEventListener("click", surprise);
+button[6].addEventListener("click", surprise);
 button[7].addEventListener("click", resetStory);
