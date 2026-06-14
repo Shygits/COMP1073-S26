@@ -17,6 +17,11 @@ body {
 	color:rebeccapurple;
 }
 
+h2 {
+	color:rgb(9, 63, 63)
+}
+
+
 /* Button Styles Buttons 1-5*/
 button:nth-of-type(1) { 
 	background-color: magenta;
@@ -31,13 +36,14 @@ button:nth-of-type(3) {
 	color: white;
 }
 button:nth-of-type(4) {
-	background-color: rgb(248, 156, 52);
+	background-color: rgb(209, 114, 4);
 	color: white;
 }
 button:nth-of-type(5) {
 	background-color: rgb(226, 63, 144);
 	color: white;
 }
+
 
 /*Button Styles for PLayback, Surprise, and Reset*/
 button:nth-of-type(6) {
