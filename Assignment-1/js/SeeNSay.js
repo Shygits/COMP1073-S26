@@ -78,11 +78,11 @@ function surprise() {
 
 //RESET FUNCTION
 function resetStory() {
-    index1 = -1;
-    index2 = -1;
-    index3 = -1;
-    index4 = -1;
-    index5 = -1;
+    index1 = 0;
+    index2 = 0;
+    index3 = 0;
+    index4 = 0;
+    index5 = 0;
 
     //SOURCED FROM https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent TO CLEAR TEXT/RESET SELECTIONS
     selection1.textContent = "";
