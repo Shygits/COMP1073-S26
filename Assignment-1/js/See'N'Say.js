@@ -1,11 +1,11 @@
-//Story Arrays for each column
+//STORY ARRAYS FOR EACH COLUMN
 const column1 = ["A", "B", "C", "D", "E"];
 const column2 = ["F", "G", "H", "I", "J"];
 const column3 = ["K", "L", "M", "N", "O"];
 const column4 = ["P", "Q", "R", "S", "T"];
 const column5 = ["U", "V", "W", "X", "Y"];
 
-//Index variables track selection
+//INDEX VARIABLES 
 let index1 = 0;
 let index2 = 0;
 let index3 = 0;
@@ -14,7 +14,7 @@ let index5 = 0;
 
 
 
-//Selection Preview elements
+//SELECTION PREVIEW VARIABLES
 const selection1 = document.getElementById("selection1");
 
 const selection2 = document.getElementById("selection2");
@@ -26,38 +26,49 @@ const selection4 = document.getElementById("selection4");
 const selection5 = document.getElementById("selection5");
 
 
-//Cycle Word Functions for each column
-function cycleCoumn1() {
+//LAYBACK, SURPRISE AND RESET BUTTON VARIABLES
+const selection6 = document.getElementById("selection6");
+
+const selection7 = document.getElementById("selection7");
+
+const selection8 = document.getElementById("selection8");
+
+
+
+
+
+//CYCLEWORD FUNCTIONS / COLUMN
+function cycleColumn1() {
     index1++;
     if (index1 >= column1.length) index1 = 0;
     selection1.textContent = "Column 1: " + column1[index1];   
 }
 
-function cycleCoumn2() {
+function cycleColumn2() {
     index2++;
     if (index2 >= column2.length) index2 = 0;
     selection2.textContent = "Column 2: " + column2[index2];   
 }
 
-function cycleCoumn3() {
+function cycleColumn3() {
     index3++;
     if (index3 >= column3.length) index3 = 0;
     selection3.textContent = "Column 3: " + column3[index3];   
 }
 
-function cycleCoumn4() {
+function cycleColumn4() {
     index4++;
     if (index4 >= column4.length) index4 = 0;
     selection4.textContent = "Column 4: " + column4[index4];   
 }
 
-function cycleCoumn5() {
+function cycleColumn5() {
     index5++;
     if (index5 >= column5.length) index5 = 0;
     selection5.textContent = "Column 5: " + column5[index5];   
 }
 
-//PlayBack Function
+//PLAYBACK FUNCTION
 function playBack() {
     const story = column1[index1] + " " 
                 + column2[index2] + " "
@@ -67,7 +78,7 @@ function playBack() {
     alert("Your Story: " + story);
 }
 
-/*Surprise Function
+/*SURPRISE FUNCTION
 function surprise() {
     const story = column1[index1] + " " 
                 + column2[index2] + " "
@@ -77,7 +88,7 @@ function surprise() {
     alert("Your Story: " + story);
 }
 
-//Reset Function
+//RESET FUNCTION
 function playBack() {
     const story = column1[index1] + " " 
                 + column2[index2] + " "
@@ -87,13 +98,23 @@ function playBack() {
     alert("Your Story: " + story);
 }*/
 
-//Event Listeners for buttons
-btton[0].addEventListener("click", changeColumn1);
-btton[0].addEventListener("click", changeColumn1);
-btton[0].addEventListener("click", changeColumn1);
-btton[0].addEventListener("click", changeColumn1);
-btton[0].addEventListener("click", changeColumn1);
 
-btton[0].addEventListener("click", changeColumn1);
-//btton[0].addEventListener("click", changeColumn1);
-//btton[0].addEventListener("click", changeColumn1);
+//RESET AND SURPRISE BUTTON COLOURS
+button[5].style.backgroundColor = "skyblue";
+button[6].style.backgroundColor = "lightgreen";
+
+
+//BUTTON EVENT LISTENERS
+button[0].addEventListener("click", cycleColumn1);
+button[1].addEventListener("click", cycleColumn2);
+button[2].addEventListener("click", cycleColumn3);
+button[3].addEventListener("click", cycleColumn4);
+button[4].addEventListener("click", cycleColumn5);
+
+
+//PLAYBACK EVENT LISTENER
+button[5].addEventListener("click", cycleColumn);
+
+//RESET AND SURPRISE EVENT LISTENERS
+//button[0].addEventListener("click", changeColumn1);
+//button[0].addEventListener("click", changeColumn1);
