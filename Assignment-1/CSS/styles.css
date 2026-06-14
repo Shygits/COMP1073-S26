@@ -11,39 +11,39 @@ body {
 
 /* Button Styles Buttons 1-5*/
 button:nth-of-type(1) {
-	background-color: red;
-	color: black;
+	background-color: magenta;
+	color: white;
 }
 
 button:nth-of-type(2) {
-	background-color: red;
-	color: black;
+	background-color: rgb(49, 193, 241);
+	color: white;
 }
 button:nth-of-type(3) {
-	background-color: red;
-	color: black;
+	background-color: rgb(50, 255, 47);
+	color: white;
 }
 button:nth-of-type(4) {
-	background-color: red;
-	color: black;
+	background-color: rgb(248, 156, 52);
+	color: white;
 }
 button:nth-of-type(5) {
-	background-color: red;
-	color: black;
+	background-color: rgb(226, 63, 144);
+	color: white;
 }
 
 /*Button Styles for PLayback, Surprise, and Reset*/
-button: nth-of-type(1) {
-	background-color: red;
-	color: black;
+button:nth-of-type(6) {
+	background-color: rgb(24, 204, 192);
+	color: white;
 }
 
-button: nth-of-type(1) {
-	background-color: red;
-	color: black;
+button:nth-of-type(7) {
+	background-color: rgb(117, 6, 139);
+	color: white;
 }
 
-button: nth-of-type(1) {
+button:nth-of-type(8) {
 	background-color: red;
-	color: black;
+	color: white;
 }
