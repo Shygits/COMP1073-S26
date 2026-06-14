@@ -7,10 +7,10 @@ const column5 = ["on the moon", "on a chair", "in my spaghetti", "in my soup", "
 
 //INDEX VARIABLES 
 let index1 = -1;
-let index2 = 0;
-let index3 = 0;
-let index4 = 0;
-let index5 = 0;
+let index2 = -1;
+let index3 = -1;
+let index4 = -1;
+let index5 = -1;
 
 //
 const button = document.querySelectorAll("button");
@@ -31,26 +31,28 @@ function cycleColumn1() {
 }
 
 function cycleColumn2() {
-     selection2.textContent = "Column 2: " + column2[index2];
     index2++;
+    selection2.textContent = "Column 2: " + column2[index2];
     if (index2 >= column2.length) index2 = 0; 
+    
 }
 
 function cycleColumn3() {
-    selection3.textContent = "Column 3: " + column3[index3]; 
     index3++;
+    selection3.textContent = "Column 3: " + column3[index3]; 
     if (index3 >= column3.length) index3 = 0;
+
 }
 
 function cycleColumn4() {
-    selection4.textContent = "Column 4: " + column4[index4];
     index4++;
+    selection4.textContent = "Column 4: " + column4[index4];
     if (index4 >= column4.length) index4 = 0;
 }
 
 function cycleColumn5() {
-    selection5.textContent = "Column 5: " + column5[index5];
     index5++;
+    selection5.textContent = "Column 5: " + column5[index5];
     if (index5 >= column5.length) index5 = 0;
 }
 
@@ -76,11 +78,11 @@ function surprise() {
 
 //RESET FUNCTION
 function resetStory() {
-    index1 = 0;
-    index2 = 0;
-    index3 = 0;
-    index4 = 0;
-    index5 = 0;
+    index1 = -1;
+    index2 = -1;
+    index3 = -1;
+    index4 = -1;
+    index5 = -1;
 
     //SOURCED FROM https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent TO CLEAR TEXT/RESET SELECTIONS
     selection1.textContent = "";
@@ -103,5 +105,5 @@ button[5].addEventListener("click", playBack);
 
 
 //RESET AND SURPRISE EVENT LISTENERS
-button[6].addEventListener("click", surprise);
+//button[6].addEventListener("click", surprise);
 button[7].addEventListener("click", resetStory);
