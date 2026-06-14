@@ -12,29 +12,15 @@ let index3 = 0;
 let index4 = 0;
 let index5 = 0;
 
-
+//
+const button = document.querySelectorAll("button");
 
 //SELECTION PREVIEW VARIABLES
 const selection1 = document.getElementById("selection1");
-
 const selection2 = document.getElementById("selection2");
-
 const selection3 = document.getElementById("selection3");
-
 const selection4 = document.getElementById("selection4");
-
 const selection5 = document.getElementById("selection5");
-
-
-//LAYBACK, SURPRISE AND RESET BUTTON VARIABLES
-const selection6 = document.getElementById("selection6");
-
-const selection7 = document.getElementById("selection7");
-
-const selection8 = document.getElementById("selection8");
-
-
-
 
 
 //CYCLEWORD FUNCTIONS / COLUMN
@@ -86,23 +72,22 @@ function surprise() {
                 + column4[index4] + " "
                 + column5[index5] ;
     alert("Your Story: " + story);
-}
-
-//RESET FUNCTION
-function playBack() {
-    const story = column1[index1] + " " 
-                + column2[index2] + " "
-                + column3[index3] + " "
-                + column4[index4] + " "
-                + column5[index5] ;
-    alert("Your Story: " + story);
 }*/
 
+//RESET FUNCTION
+function resetStory() {
+    index1 = 0;
+    index2 = 0;
+    index3 = 0;
+    index4 = 0;
+    index5 = 0;
 
-//RESET AND SURPRISE BUTTON COLOURS
-button[5].style.backgroundColor = "skyblue";
-button[6].style.backgroundColor = "lightgreen";
-
+    selection1.textContent = "";
+    selection2.textContent = "";
+    selection3.textContent = "";
+    selection4.textContent = "";
+    selection5.textContent = "";
+}
 
 //BUTTON EVENT LISTENERS
 button[0].addEventListener("click", cycleColumn1);
@@ -113,8 +98,8 @@ button[4].addEventListener("click", cycleColumn5);
 
 
 //PLAYBACK EVENT LISTENER
-button[5].addEventListener("click", cycleColumn);
+button[5].addEventListener("click", playBack);
+
 
 //RESET AND SURPRISE EVENT LISTENERS
-//button[0].addEventListener("click", changeColumn1);
-//button[0].addEventListener("click", changeColumn1);
+button[6].addEventListener("click", surprise);button[7].addEventListener("click", resetStory);
