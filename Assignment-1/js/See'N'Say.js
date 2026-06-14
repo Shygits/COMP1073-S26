@@ -1,9 +1,9 @@
 //STORY ARRAYS FOR EACH COLUMN
-const column1 = ["A", "B", "C", "D", "E"];
-const column2 = ["F", "G", "H", "I", "J"];
-const column3 = ["K", "L", "M", "N", "O"];
-const column4 = ["P", "Q", "R", "S", "T"];
-const column5 = ["U", "V", "W", "X", "Y"];
+const column1 = ["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
+const column2 = ["sat on", "ate", "danced with", "saw", "doesn't like", "kissed"];
+const column3 = ["a funny", "a scary", "a goofy", "a slimy", "a barking", "a fat"];
+const column4 = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
+const column5 = ["on the moon", "on a chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
 
 //INDEX VARIABLES 
 let index1 = 0;
