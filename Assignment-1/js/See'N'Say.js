@@ -25,6 +25,7 @@ const selection4 = document.getElementById("selection4");
 
 const selection5 = document.getElementById("selection5");
 
+
 //Cycle Word Functions for each column
 function cycleCoumn1() {
     index1++;
@@ -54,4 +55,13 @@ function cycleCoumn5() {
     index5++;
     if (index5 >= column5.length) index5 = 0;
     selection5.textContent = "Column 5: " + column5[index5];   
+}
+
+//PlayBack Function
+function playBack() {
+    const story = column1[index1] + " " 
+                + column2[index2] + " "
+                + column3[index3] + " "
+                + column4[index4] + " "
+                + column5[index5] + " "
 }
