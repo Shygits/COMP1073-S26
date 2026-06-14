@@ -82,6 +82,7 @@ function resetStory() {
     index4 = 0;
     index5 = 0;
 
+    //SOURCED FROM https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent TO CLEAR TEXT/RESET SELECTIONS
     selection1.textContent = "";
     selection2.textContent = "";
     selection3.textContent = "";
@@ -102,4 +103,5 @@ button[5].addEventListener("click", playBack);
 
 
 //RESET AND SURPRISE EVENT LISTENERS
-button[6].addEventListener("click", surprise);button[7].addEventListener("click", resetStory);
+//button[6].addEventListener("click", surprise);
+button[7].addEventListener("click", resetStory);
