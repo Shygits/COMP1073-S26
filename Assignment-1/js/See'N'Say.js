@@ -66,7 +66,7 @@ function playBack() {
     alert("Your Story: " + story);
 }
 
-/*SURPRISE FUNCTION
+/*(SURPRISE FUNCTION
 function surprise() {
     const story = column1[index1] + " " 
                 + column2[index2] + " "
