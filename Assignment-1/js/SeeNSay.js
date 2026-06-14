@@ -6,11 +6,11 @@ const column4 = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
 const column5 = ["on the moon", "on a chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
 
 //INDEX VARIABLES 
-let index1 = -1;
-let index2 = -1;
-let index3 = -1;
-let index4 = -1;
-let index5 = -1;
+let index1 = 0;
+let index2 = 0;
+let index3 = 0;
+let index4 = 0;
+let index5 = 0;
 
 //
 const button = document.querySelectorAll("button");
