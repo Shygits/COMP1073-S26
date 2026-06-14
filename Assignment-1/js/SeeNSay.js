@@ -6,11 +6,11 @@ const column4 = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
 const column5 = ["on the moon", "on a chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
 
 //INDEX VARIABLES 
-let index1 = 0;
-let index2 = 0;
-let index3 = 0;
-let index4 = 0;
-let index5 = 0;
+let index1 = -1;
+let index2 = -1;
+let index3 = -1;
+let index4 = -1;
+let index5 = -1;
 
 //
 const button = document.querySelectorAll("button");
@@ -78,11 +78,11 @@ function surprise() {
 
 //RESET FUNCTION
 function resetStory() {
-    index1 = 0;
-    index2 = 0;
-    index3 = 0;
-    index4 = 0;
-    index5 = 0;
+    index1 = -1;
+    index2 = -1;
+    index3 = -1;
+    index4 = -1;
+    index5 = -1;
 
     //SOURCED FROM https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent TO CLEAR TEXT/RESET SELECTIONS
     selection1.textContent = "";
@@ -106,4 +106,4 @@ button[5].addEventListener("click", playBack);
 
 //RESET AND SURPRISE EVENT LISTENERS
 //button[6].addEventListener("click", surprise);
-button[7].addEventListener("click", resetStory);
+button[6].addEventListener("click", resetStory);
