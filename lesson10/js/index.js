@@ -15,7 +15,7 @@ function Coffee(size, isDecaf, qtyCream, qtySugar) {
 
 }
 /* STEP 2: Instatiate a coffee based on the above constructor function */
-let shyCoffee = new Coffee('Medium', false, 3, 3);
+let shyCoffee = new Coffee('Large', false, 3, 3);
 output.textContent = shyCoffee.description();
 
 /* STEP 3: Refresh the page, and in the console, begin to call a method on shyCoffee by typing 'shyCoffee.' - look at all the members and methods */
@@ -35,7 +35,7 @@ output.textContent = shyCoffee.description();
 
 /* STEP 6a: Let's circle back to create() - use scottsCoffee to create a new object instance - one based on shyCoffee. */
 let stefCoffee = Object.create(shyCoffee);
-stefCoffe.size = "Large";
+stefCoffe.size = "Medium";
 stefCoffee.isDecaf = true;
 stefCoffee.qtyCream = 1;
 stefCoffee.qtySugar =3;
@@ -48,7 +48,7 @@ stefCoffee.qtySugar =3;
 
 
 /* STEP 7b: Since constructor is also a function, you can use it to create a new object instance - try it! */
-
+let eliCoffee = new stefCoffee.constructor("small", true, 4, 3);
 
 /* STEP 7c: Attempt via the console to access the new object's properties - eliCoffee.size, eliCoffee.isDecaf, etc. */
 
