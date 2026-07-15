@@ -1,7 +1,14 @@
 const output = document.querySelector('#output');
 
 /* STEP 1: Create an object (looks a lot like declaring a variable, but with empty braces), then open this page in a browser and enter 'Coffee' in the console */
+function Coffee(size, isDecaf, qtyCream, qtySugar) {
+    this.size = size;
+    this.Decaf = isDecaf;
+    this.qtyCream = qtyCream;
+    this.qtySugar = qtySugar;
+    this.decaf = this.isDecaf ? "decaffinated" : "caffeinated";
 
+}
 /* STEP 2: Instatiate a coffee based on the above constructor function */
 
 /* STEP 3: Refresh the page, and in the console, begin to call a method on scottsCoffee by typing 'scottsCoffee.' - look at all the members and methods */
