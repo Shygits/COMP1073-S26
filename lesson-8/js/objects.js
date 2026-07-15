@@ -3,14 +3,14 @@ const output = document.getElementById("output");
 /* STEP 1: Create an object (looks a lot like declaring a variable, but with empty braces), then open this page in a browser and enter 'person' in the console */
 let person = {
     name: {
-        firstName: "Priyansh",
-        lastName: "Thakar",
+        firstName: "Shy-Anna",
+        lastName: "Lee",
     },
-    age: 18,
-    gender: "Male",
-    interest: ["swimming", "dancing", "writing"],
+    age: 37,
+    gender: "Female",
+    interest: ["reading", "outdoors", "writing"],
     greetings: function () {
-        return `Hello ${this.name.firstName}, Howe are you?`;
+        return `Hello ${this.name.firstName}, How are you?`;
     },
     bio: function () {
         alert(
