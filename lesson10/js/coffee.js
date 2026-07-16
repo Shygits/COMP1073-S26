@@ -92,3 +92,40 @@ let priyanshLatte = new Latte("large", false, "2%");
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 
 // Special thanks to https://openclipart.org/detail/293550/coffee-to-go for the very cool coffee cup SVG
+
+
+//LAB 2 ADDITION: CLASSES AND INHERITANCE
+//In this lab you will extend the Coffee class from the class exercise to create your own custom coffee drink subclass. You will practice defining a subclass using the extends keyword, using super() to inherit from a parent class, adding your own method, and creating instances of your new class.
+
+//Create a new subclass of Coffee named after a coffee drink of your choice (e.g. Cappuccino, Mocha, FlatWhite). Use the extends keyword to inherit from Coffee.
+
+class Mocha extends Coffee {
+    shots;
+    syrup;
+
+    //Add at least one unique property to your subclass beyond size and isDecaf (e.g. shots, flavour, foamLevel). Write a constructor that accepts all properties and uses super() to pass size and isDecaf up to the parent class.
+    constructor(size, isDecaf, shots, syrup) {
+        super(size, isDecaf);
+        this.shots = shots;
+        this.syrup = syrup;
+    }
+    //Add a method to your subclass that builds and returns a description string of the drink, including all properties. For example: "A large Mocha with 2 shots and caramel syrup."
+    mochaDesc() {
+        return `A ${this.size} sized Mocha with ${this.shots} shots and ${this.syrup} syrup.`;
+    }
+}
+
+//Instantiate at least two objects from your new subclass with different values.
+let priyanshMocha = new Mocha("medium", false, 2, "caramel");
+let robertMocha = new Mocha("large", true, 3, "hazelnut");
+
+//Call SERVEIT() method on each of your objects and observe the output on the page.
+priyanshMocha.serveIt();
+robertMocha.serveIt();
+
+//Call your custom description method on each object and display the returned string on the page.
+priyanshMocha.mochaDesc();
+robertMocha.mochaDesc();
+
+
+
