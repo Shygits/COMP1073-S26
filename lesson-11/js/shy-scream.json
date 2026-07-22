@@ -11,9 +11,10 @@
       "ingredients" : [
         "peppermint cream",
         "dark chocolate chips",
-        "vanilla extract"
+        "vanilla extract",
+        "green food colouring"
       ],
-      "image" : "chocolate-mint.svg"
+      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/chocolate-mint.svg"
     },
     {
       "name" : "Perfect Peach Mango",
