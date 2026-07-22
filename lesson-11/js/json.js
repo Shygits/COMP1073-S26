@@ -36,18 +36,27 @@ showTopFlavors(responseJson);
 populate();
 
 /* STEP 9b: Build out the populateHeader() function */
+function populateHeader(json) {
 
-// Create the H1 element
+    // Create the H1 element
+    let h1 = document.createElement("h1");// <h1></h1>
 
-// Grab the company name from the JSON object and use it for the text node
+    // Grab the company name from the JSON object and use it for the text node
+    h1.textContent = json.companyName;
 
-// Inject the complete H1 element into the DOM, inside the HEADER
+    // Inject the complete H1 element into the DOM, inside the HEADER
+    header.appendChild(h1);
+}
 
 /* STEP 10b: Assemble the showTopFlavors() function */
+function showTopFlavors(json) {
 
 // STEP 10c: Bind the JSON topFlavors object to a var
+    let topFlavors = json.topFlavors;
 
 // STEP 10d: Loop through the topFlavors object
+    for (let i = 0; i < topFlavors.length; i++) {
+        let flavor = topFlavors[i];
 
 // STEP 10e: build HTML elements for the content: article, h2, image, p1, p2, list
 
