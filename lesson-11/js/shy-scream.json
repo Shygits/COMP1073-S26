@@ -17,13 +17,14 @@
       "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/chocolate-mint.svg"
     },
     {
-      "name" : "Perfect Peach Mango",
+      "name" : "Peach Mango",
       "calories" : 350,
       "type" : "sorbet",
       "ingredients" : [
         "peach purée",
+        "mango puree",
         "mango chunks",
-        "clover honey"
+        "wild clover honey"
       ],
       "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/peach-mango.svg"
     }
