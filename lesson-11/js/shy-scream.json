@@ -39,6 +39,30 @@
         "red food colouring"
       ],
       "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
+    },
+    {
+      "name" : "Strawberry Sprinkle",
+      "calories" : 250,
+      "type" : "ice-cream",
+      "ingredients" : [
+        "strawberry puree",
+        "sprinkles",
+        "vanilla extract",
+        "red food colouring"
+      ],
+      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
+    },
+    {
+      "name" : "Strawberry Sprinkle",
+      "calories" : 250,
+      "type" : "ice-cream",
+      "ingredients" : [
+        "strawberry puree",
+        "sprinkles",
+        "vanilla extract",
+        "red food colouring"
+      ],
+      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
     }
   ]
 }
