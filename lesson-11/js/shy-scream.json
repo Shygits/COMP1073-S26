@@ -41,28 +41,28 @@
       "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
     },
     {
-      "name" : "Strawberry Sprinkle",
-      "calories" : 250,
+      "name" : "Pistachio Sprinkle",
+      "calories" : 420,
       "type" : "ice-cream",
       "ingredients" : [
-        "strawberry puree",
+        "pistachio cream",
         "sprinkles",
         "vanilla extract",
-        "red food colouring"
+        "crushed pistachio nuts"
       ],
-      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
+      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/ice-cream-xtra1.svg"
     },
     {
-      "name" : "Strawberry Sprinkle",
-      "calories" : 250,
+      "name" : "Toffee Pecan",
+      "calories" : 370,
       "type" : "ice-cream",
       "ingredients" : [
-        "strawberry puree",
-        "sprinkles",
+        "toffee bits",
+        "pecan pieces",
         "vanilla extract",
-        "red food colouring"
+        "brown sugar"
       ],
-      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/strawberry-sprinkle.svg"
+      "image" : "https://shygits.github.io/COMP1073-S26/lesson-11/images/ice-cream-xtra2.svg"
     }
   ]
 }
