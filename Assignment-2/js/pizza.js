@@ -80,3 +80,21 @@ output.innerHTML = `<p>${myPizza.describePizza()}</p>`;
 
 
 // PIZZA CLASS 
+class Pizza {
+    constructor(customerName, size, crust, sauce, toppings, extraCheese, instructions) {
+        this.customerName = customerName;
+        this.size = size;
+        this.crust = crust;
+        this.sauce = sauce;
+        this.toppings = toppings;
+        this.extraCheese = extraCheese;
+        this.instructions = instructions;
+    }
+pizzaDescription() {
+    let cheeseText = this.extraCheese ? " with extra cheese" : " No extra cheese";
+    return `
+    
+    `;
+}
+
+}

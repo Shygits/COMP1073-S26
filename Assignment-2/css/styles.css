@@ -1,6 +1,6 @@
 /* GLOBAL PAGE STYLING*/
 body {
-    background-color: #f3e5ab; /* pizza dough beige */
+    background-color: #f3e5ab; 
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ header {
 }
 
 h1 {
-    color: #841818; /* deep pizza red */
+    color: #841818;
 }
 
 /*FORM CONTAINER*/
@@ -74,7 +74,7 @@ textarea {
     padding: 15px;
     background: #fff;
     border-radius: 10px;
-    /* PIZZA RED BORDER */
+    /* RED BORDER */
     border: 2px solid #a91a1a; 
 }
 
