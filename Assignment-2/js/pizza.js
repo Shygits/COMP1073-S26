@@ -96,10 +96,10 @@ class Pizza {
         let cheeseText = this.extraCheese ? " with extra cheese" : " No extra cheese";
         
         return `
-            ${this.customerName}, your order is:
-            A ${this.size} pizza with ${this.crust} crust, ${this.sauce} sauce, toppings: ${this.toppings.join(", ")},
+            ${this.customerName}, You Ordered:
+            A ${this.size} Pizza With ${this.crust} Crust, With ${this.sauce} sauce. Your toppings selected are: ${this.toppings.join(", ")},
             ${cheeseText},
-            and special instructions: "${this.instructions || "none"}".
+            Special Instructions Include: "${this.instructions || "none"}".
         `;
     }
 
