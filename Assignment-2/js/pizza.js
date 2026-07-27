@@ -20,7 +20,13 @@ pizzaForm.addEventListener("submit", function(e) {
     const sauce = document.querySelector("#sauce").value;
 
     //TOPPINGS
-    
+    const toppingNodes = document.querySelectorAll("input[name='toppings']:checked");
+    let toppings = [];
+
+    toppingNodes.forEach(function(topping) 
+{
+    toppings.push(topping.value);
+});
     
 
 });
