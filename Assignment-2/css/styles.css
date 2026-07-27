@@ -44,7 +44,7 @@ textarea {
     border: 1px solid #ccc;
 }
 
-/*ITALIAN BUTTONS STYLED*/
+/*ITALIAN STYLED BUTTONS*/
 #orderBtn {
     width: 100%;
     padding: 12px;
@@ -55,7 +55,7 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
 
-    /* ITALIAN FLAG GRADIENT BUTTON */
+    /* GRADIENT BUTTON */
     background: linear-gradient(
         90deg,
         #008000 0%,   /* green */
@@ -74,11 +74,18 @@ textarea {
     padding: 15px;
     background: #fff;
     border-radius: 10px;
-    border: 2px solid #a91a1a; /* pizza red border */
+    /* PIZZA RED BORDER */
+    border: 2px solid #a91a1a; 
 }
 
 /* Error messages */
 .error {
     color: #ff0000;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+footer {
+    color: purple;
     font-weight: bold;
 }
