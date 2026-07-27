@@ -50,12 +50,26 @@ if(sauce === "") {
 }
 
 if(toppings.length === 0) {
-    errors.push("please choose pizza size");
+    errors.push("please choose at least 1 topping");
 }
 
+//If errors exist then shows them and stops page submission
 if(error.length > 0) {
 output.innerHTML = `<p class="error">${errors.join("<br>")}</p>`;
 }
 
+//PIZZA OBJECT
+const myPizza = new Pizza (
+    customerName,
+    size.value,
+    crust,
+    sauce,
+    toppings,
+    extraCheese,
+    instructions
+);
+
+
+// OUTPUT DESCRIPTION FROM CLASS METHOD
 
 });
