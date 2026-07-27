@@ -23,10 +23,38 @@ pizzaForm.addEventListener("submit", function(e) {
     const toppingNodes = document.querySelectorAll("input[name='toppings']:checked");
     let toppings = [];
 
-    toppingNodes.forEach(function(topping) 
-{
-    toppings.push(topping.value);
+    toppingNodes.forEach(function(topping) {
+        toppings.push(topping.value);
 });
     
+const extraCheese = document.querySelector("#extraCheese").checked;
+const instructions = document.querySelector("#instructions").value.trim();
+
+//VALIDATION
+let errors = [];
+if (customerName === "") {
+    errors.push("Please enter your name");
+}
+
+if(!size) {
+    errors.push("please choose a pizza size");
+}
+
+if(!size) {
+    errors.push("please choose a pizza size");
+}
+
+if(!size) {
+    errors.push("please choose a pizza size");
+}
+
+if(!size) {
+    errors.push("please choose a pizza size");
+}
+
+if(!size) {
+    errors.push("please choose a pizza size");
+}
+
 
 });
