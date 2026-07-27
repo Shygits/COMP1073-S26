@@ -90,11 +90,15 @@ class Pizza {
         this.extraCheese = extraCheese;
         this.instructions = instructions;
     }
-pizzaDescription() {
-    let cheeseText = this.extraCheese ? " with extra cheese" : " No extra cheese";
-    return `
-    
-    `;
-}
+    pizzaDescription() {
+        let cheeseText = this.extraCheese ? " with extra cheese" : " No extra cheese";
+        
+        return `
+            ${this.customerName}, your order is:
+            A ${this.size} pizza with ${this.crust} crust, ${this.sauce} sauce, toppings: ${this.toppings.join(" , ")},
+            ${cheeseText},
+            and special instructions: "${this.instructions || "none"}".
+        `;
+    }
 
 }
