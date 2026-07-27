@@ -54,9 +54,11 @@ if(toppings.length === 0) {
 }
 
 //If errors exist then shows them and stops page submission
-if(error.length > 0) {
+if(errors.length > 0) {
 output.innerHTML = `<p class="error">${errors.join("<br>")}</p>`;
+return;
 }
+
 
 //PIZZA OBJECT
 const myPizza = new Pizza (
@@ -71,7 +73,7 @@ const myPizza = new Pizza (
 
 
 // OUTPUT DESCRIPTION FROM CLASS METHOD
-output.innerHTML = `<p>${myPizza.describePizza()}</p>`;
+output.innerHTML = `<p>${myPizza.pizzaDescription()}</p>`;
 });
 
 //--------------------------
