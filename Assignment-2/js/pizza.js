@@ -71,5 +71,12 @@ const myPizza = new Pizza (
 
 
 // OUTPUT DESCRIPTION FROM CLASS METHOD
-
+output.innerHTML = `<p>${myPizza.describePizza()}</p>`;
 });
+
+//--------------------------
+// ADD ANOTHER PIZZA BUTTON 
+//--------------------------
+
+
+// PIZZA CLASS 
