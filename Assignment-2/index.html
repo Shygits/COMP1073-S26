@@ -6,11 +6,11 @@
     <title>Pizza Maker</title>
 
     <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
 
-    <!-- JavaScript defer-->
-     <script src="js/pizza.js" defer></script>
+    <!-- JavaScript defer -->
+    <script src="js/pizza.js" defer></script>
 </head>
 
 <body>
@@ -18,11 +18,12 @@
     <header>
         <h1>Build Your Pizza!</h1>
 
-        <!-- JS will inserts name + student ID after page loads -->
-        <p id="studentInfo"></p> 
+        <!-- JS inserts name + student ID after page loads -->
+        <p id="studentInfo"></p>
     </header>
     
     <main>
+
         <!-- Pizza Order Form -->
         <form id="pizzaForm">
 
@@ -45,9 +46,7 @@
                 <option value="thin">Thin</option>
                 <option value="regular">Regular</option>
                 <option value="thick">Thick</option>
-                <option value="stuffed">Stuffed Crust
-
-                </option>
+                <option value="stuffed">Stuffed Crust</option>
                 <option value="pretzel">Pretzel</option>
             </select>
 
@@ -61,23 +60,22 @@
                 <option value="pesto">Pesto</option>
             </select>
 
-            <!-- TOPPINGS -->
+            <!-- MEAT TOPPINGS -->
             <fieldset>
-                <legend>Toppings</legend>
+                <legend>Meat Toppings</legend>
                 <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
-                
-                <label><input type="checkbox" name="toppings" value="pineapple"> Pineappple</label>
-                
-                <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
-                
                 <label><input type="checkbox" name="toppings" value="groundBeef"> Ground Beef</label>
-                
                 <label><input type="checkbox" name="toppings" value="bacon"> Bacon</label>
-                
-                <label><input type="checkbox" name="toppings" value="olives"> Black Olives</label>
-                
-                <label><input type="checkbox" name="toppings" value="peppers"> Hot Peppers</label>
+            </fieldset>
 
+            <!-- VEGETABLE TOPPINGS -->
+            <fieldset>
+                <legend>Vegetable Toppings</legend>
+                <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+                <label><input type="checkbox" name="toppings" value="jalapenos"> Jalapenos</label>
+                <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+                <label><input type="checkbox" name="toppings" value="olives"> Black Olives</label>
+                <label><input type="checkbox" name="toppings" value="peppers"> Hot Peppers</label>
                 <label><input type="checkbox" name="toppings" value="green peppers"> Green Peppers</label>
             </fieldset>
 
@@ -102,7 +100,6 @@
         </section>
 
     </main>
-
 
 </body>
 </html>
