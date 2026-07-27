@@ -32,6 +32,7 @@ const instructions = document.querySelector("#instructions").value.trim();
 
 //VALIDATION
 let errors = [];
+
 if (customerName === "") {
     errors.push("Please enter your name");
 }
@@ -40,20 +41,20 @@ if(!size) {
     errors.push("please choose a pizza size");
 }
 
-if(!size) {
-    errors.push("please choose a pizza size");
+if(crust === "") {
+    errors.push("please choose type of crust");
 }
 
-if(!size) {
-    errors.push("please choose a pizza size");
+if(sauce === "") {
+    errors.push("please choose a type of sauce");
 }
 
-if(!size) {
-    errors.push("please choose a pizza size");
+if(toppings.length === 0) {
+    errors.push("please choose pizza size");
 }
 
-if(!size) {
-    errors.push("please choose a pizza size");
+if(error.length > 0) {
+output.innerHTML = `<p class="error">${errors.join("<br>")}</p>`;
 }
 
 
