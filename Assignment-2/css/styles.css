@@ -1,6 +1,4 @@
-/* ------------------------------
-   GLOBAL PAGE STYLING
---------------------------------*/
+/* GLOBAL PAGE STYLING*/
 body {
     background-color: #f3e5ab; /* pizza dough beige */
     font-family: Arial, sans-serif;
@@ -8,21 +6,17 @@ body {
     padding: 0;
 }
 
-/* ------------------------------
-   HEADER
---------------------------------*/
+/*HEADER*/
 header {
     text-align: center;
     padding: 20px;
 }
 
 h1 {
-    color: #b22222; /* deep pizza red */
+    color: #841818; /* deep pizza red */
 }
 
-/* ------------------------------
-   FORM CONTAINER
---------------------------------*/
+/*FORM CONTAINER*/
 main {
     width: 90%;
     max-width: 600px;
@@ -33,9 +27,7 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* ------------------------------
-   FORM ELEMENTS
---------------------------------*/
+/*FORM ELEMENTS*/
 label, legend {
     font-weight: bold;
     margin-top: 10px;
@@ -52,9 +44,7 @@ textarea {
     border: 1px solid #ccc;
 }
 
-/* ------------------------------
-   ITALIAN BUTTONS
---------------------------------*/
+/*ITALIAN BUTTONS STYLED*/
 #orderBtn {
     width: 100%;
     padding: 12px;
@@ -65,12 +55,12 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
 
-    /* Italian flag gradient */
+    /* ITALIAN FLAG GRADIENT BUTTON */
     background: linear-gradient(
         90deg,
         #008000 0%,   /* green */
         #ffffff 50%,  /* white */
-        #ff0000 100%  /* red */
+        #e03d3d 100%  /* red */
     );
 }
 
@@ -78,15 +68,13 @@ textarea {
     opacity: 0.9;
 }
 
-/* ------------------------------
-   OUTPUT SECTION
---------------------------------*/
+/*OUTPUT SECTION*/
 #output {
     margin-top: 20px;
     padding: 15px;
     background: #fff;
-    border-radius: 8px;
-    border: 2px solid #b22222; /* pizza red border */
+    border-radius: 10px;
+    border: 2px solid #a91a1a; /* pizza red border */
 }
 
 /* Error messages */
