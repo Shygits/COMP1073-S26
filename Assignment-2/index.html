@@ -11,6 +11,88 @@
 
     <!-- JavaScript defer-->
      <script src="js/pizza.js" defer></script>
-
 </head>
+
+<body>
+
+    <header>
+        <h1>Build Your Pizza!</h1>
+
+        <!-- JS will inserts name + student ID after page loads -->
+        <p id="studentInfo"></p> 
+    </header>
+    
+    <main>
+        <!-- Pizza Order Form -->
+        <form id="pizzaForm">
+
+            <!-- CUSTOMER NAME -->
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" required>
+
+            <!-- SIZE -->
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <label><input type="radio" name="size" value="small" required> Small</label>
+                <label><input type="radio" name="size" value="medium"> Medium</label>
+                <label><input type="radio" name="size" value="large"> Large</label>
+            </fieldset>
+
+            <!-- CRUST -->
+            <label for="crust">Crust Type:</label>
+            <select id="crust" required>
+                <option value="">-- Choose crust --</option>
+                <option value="thin">Thin</option>
+                <option value="regular">Regular</option>
+                <option value="thick">Thick</option>
+                <option value="stuffed">Stuffed</option>
+                <option value="pretzel">Pretzel</option>
+            </select>
+
+            <!-- SAUCE -->
+            <label for="sauce">Sauce:</label>
+            <select id="sauce" required>
+                <option value="">-- Choose sauce --</option>
+                <option value="tomato">Tomato</option>
+                <option value="homestyle">Thick Homestyle</option>
+                <option value="alfredo">Alfredo</option>
+                <option value="pesto">Pesto</option>
+            </select>
+
+            <!-- TOPPINGS -->
+            <fieldset>
+                <legend>Toppings</legend>
+                <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+                
+                <label><input type="checkbox" name="toppings" value="pineapple"> Pineappple</label>
+                
+                <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+                
+                <label><input type="checkbox" name="toppings" value="groundBeef"> Ground Beef</label>
+                
+                <label><input type="checkbox" name="toppings" value="green peppers"> Green Peppers</label>
+            </fieldset>
+
+            <!-- EXTRA CHEESE -->
+            <label>
+                <input type="checkbox" id="extraCheese">
+                Extra Cheese
+            </label>
+
+            <!-- SPECIAL INSTRUCTIONS -->
+            <label for="instructions">Special Instructions:</label>
+            <textarea id="instructions" rows="3"></textarea>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" id="orderBtn">Order Pizza</button>
+
+        </form>
+
+        <!-- OUTPUT -->
+        <section id="output"></section>
+        
+    </main>
+
+
+</body>
 </html>
