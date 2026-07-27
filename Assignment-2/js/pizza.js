@@ -95,7 +95,7 @@ class Pizza {
         
         return `
             ${this.customerName}, your order is:
-            A ${this.size} pizza with ${this.crust} crust, ${this.sauce} sauce, toppings: ${this.toppings.join(" , ")},
+            A ${this.size} pizza with ${this.crust} crust, ${this.sauce} sauce, toppings: ${this.toppings.join(", ")},
             ${cheeseText},
             and special instructions: "${this.instructions || "none"}".
         `;
