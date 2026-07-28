@@ -20,6 +20,10 @@ h1 {
     color: #841818;
 }
 
+h2 {
+    color:#066706
+}
+
 /*FORM CONTAINER*/
 main {
     width: 90%;
@@ -28,10 +32,9 @@ main {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-
+    
     border: 10px solid transparent;
     border-image: linear-gradient(90deg, #008000, #ffffff, #e03d3d) 1;
-
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
