@@ -1,10 +1,14 @@
 /* GLOBAL PAGE STYLING*/
 body {
-    background-color: #f3e5ab; 
+    background-color: #f3e5ab;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    border: 15px solid transparent;
+    border-image: linear-gradient(90deg, #e03d3d, #ffffff, #008000) 1;
 }
+
 
 /*HEADER*/
 header {
@@ -21,11 +25,16 @@ main {
     width: 90%;
     max-width: 600px;
     margin: 20px auto;
-    background: #fff; 
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
+
+    border: 10px solid transparent;
+    border-image: linear-gradient(90deg, #008000, #ffffff, #e03d3d) 1;
+
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 
 /*FORM ELEMENTS*/
 label, legend {
@@ -88,4 +97,6 @@ textarea {
 footer {
     color: purple;
     font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
 }
