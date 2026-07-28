@@ -79,6 +79,18 @@ output.innerHTML = `<p>${myPizza.pizzaDescription()}</p>`;
 //--------------------------
 // ADD ANOTHER PIZZA BUTTON 
 //--------------------------
+const addAnotherBtn = document.querySelector("#addAnotherBtn");
+
+addAnotherBtn.addEventListener("click", function() {
+    //Clear form and output
+
+    pizzaForm.reset();
+    output.innerHTML = "";
+});
+
+//---------------------------
+//END
+//---------------------------
 
 
 // PIZZA CLASS 
