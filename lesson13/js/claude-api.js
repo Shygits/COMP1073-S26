@@ -183,7 +183,7 @@ function sendFollowUpMessage(){
     .then(json => {
 
         //===============================================================
-        // LAB 4 EXTENSION: Add Claude's follow-up response to history
+        // LAB 4 EXTENSION: Add Claude's follow-up message to history
         //===============================================================
         conversationHistory.push({
             role: "assistant",
