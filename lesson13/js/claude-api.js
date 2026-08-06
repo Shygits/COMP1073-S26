@@ -103,7 +103,7 @@ function sendChatMessage(){
     // STEP 8c: Prepare the request body according to Claude API format
     // Body: { model: "claude-3-5-sonnet-20241022", max_tokens: 100, messages: [{ role: "user", content: "your message" }] }
     let body = {
-        "model": "claude-sonnet-5",
+        "model": "claude-haiku-4-5",
         "max_tokens": maxTokens,
         "messages": [{
             "role": "user",
@@ -140,19 +140,6 @@ function sendChatMessage(){
         //===============================================================
         followUpSection.style.display = "block";
        
-    });
-}
-
-//==============================================================
-// LAB 4 EXTENSION: Send follow-up message to Claude
-//==============================================================
-function sendFollowUpMessage(){
-    let followUpText = followUpMessage.value;
-
-    // Add user's follow-up to history
-    conversationHistory.push({
-        role: "user",
-        content: followUpText
     });
 }
 
@@ -221,19 +208,6 @@ function displayFollowUp(json){
 
     results.appendChild(box);
 }
-
-// LAB EXTENSION: Multi-Message Chat Feature
-// After completing the basic implementation, extend the functionality to support conversation history:
-
-/* LAB STEP 1: Modify sendChatMessage to use conversation history */
-// - Add the user's message to conversationHistory
-// - Send the entire conversation to the API instead of just the current message
-// - Add Claude's response to conversationHistory
-
-/* LAB STEP 2: Update the displayResult function for chat-like appearance */
-// - Show messages in a conversation format
-// - Display user and Claude messages differently
-// - Show conversation flow clearly
 
 // LAB EXTENSION: Multi-Message Chat Feature
 // After completing the basic implementation, extend the functionality to support conversation history:
