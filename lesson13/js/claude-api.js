@@ -45,6 +45,11 @@ sendMessageBtn.addEventListener("click", sendChatMessage);
 // STEP 6b: Check usage button
 checkUsageBtn.addEventListener("click", checkTokenUsage);
 
+//==============================================
+// LAB 4 EXTENSION: Add event listener for follow-up message button
+//==============================================
+sendFollowUpBtn.addEventListener("click", sendFollowUpMessage);
+
 /* STEP 7: Create the checkTokenUsage function */
 function checkTokenUsage(){
     // STEP 7a: Create complete url
@@ -102,14 +107,17 @@ function sendChatMessage(){
     
     // STEP 8c: Prepare the request body according to Claude API format
     // Body: { model: "claude-3-5-sonnet-20241022", max_tokens: 100, messages: [{ role: "user", content: "your message" }] }
+   
+   
+    //===============================================================
+   // LAB 4 EXTENSION: Use conversation history instead not just the current message
+   //================================================================
     let body = {
-        "model": "claude-haiku-4-5",
-        "max_tokens": maxTokens,
-        "messages": [{
-            "role": "user",
-            "content": userInput
-        }]
-    }
+    "model": "claude-haiku-4-5",
+    "max_tokens": maxTokens,
+    "messages": conversationHistory
+};
+
     
     // STEP 8d: Make the API request using fetch()
     fetch(url, {
@@ -147,9 +155,24 @@ function sendChatMessage(){
 function displayMessage(json){
     console.log(json);
 
-    let para = document.createElement("p"); // <p></p>
+    //BLOCKED OUT FOR STEP 2 LAB 4 ADDITION: Displayresponse in a chat-like format
+    /*let para = document.createElement("p"); // <p></p>
     para.textContent = json.content[0].text;
-    results.appendChild(para);
+    results.appendChild(para);*/
+//===============================================================
+    // LAB EXTENSION STEP 2: Chat-style appearance for Claude messages
+    //===============================================================
+    let bubble = document.createElement("div");
+    bubble.style.backgroundColor = "#f0f0f0";
+    bubble.style.padding = "10px";
+    bubble.style.margin = "10px 0";
+    bubble.style.borderRadius = "8px";
+    bubble.style.maxWidth = "70%";
+    bubble.style.textAlign = "left";
+
+    bubble.textContent = "Claude: " + json.content[0].text;
+
+    results.appendChild(bubble);
 }
 //==============================================================
 // LAB 4 EXTENSION: Send follow-up message to Claude
