@@ -11,6 +11,12 @@
 //    Headers: X-Student-API-Key: your_student_id
 //    Response: { student_id: "12345", student_name: "John Doe", tokens_used: 500, tokens_allocated: 10000, tokens_remaining: 9500, is_enabled: true }
 
+//==============================================
+//LAB 4 EXTENSION: Multi-Message Chat Feature
+//==============================================
+
+let conversationHistory = []; // Array to store the conversation history
+
 // STEP 1: Store the API configuration
 // STEP 2: Set the base URL for the Claude API
 const baseURL = "https://georgian.polaristechservices.com";
@@ -74,6 +80,15 @@ function sendChatMessage(){
     // STEP 8a: Get form values
     let userInput = userMessage.value;
 
+    //============================================
+    // LAB 4 EXTENSION: Multi-Message Chat Feature
+    //============================================
+    // Add user's message to the conversation history
+    conversationHistory.push({
+        role: "user",
+        content: userInput
+    });
+
     // STEP 8b: Create complete url
     let url = `${baseURL}/api/claude/messages`;
     
@@ -104,6 +119,13 @@ function sendChatMessage(){
     .then(json => {
         displayMessage(json);
     })
+//========================================
+//LAB 4 EXTENSION: store first return
+//========================================
+    conversationHistory.push ({
+        role: "user",
+        content: json.cotent[0].text
+    });
 }
 
 // STEP 8f: Extract the message content from Claude's response
