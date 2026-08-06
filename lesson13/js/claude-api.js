@@ -12,16 +12,16 @@
 //    Response: { student_id: "12345", student_name: "John Doe", tokens_used: 500, tokens_allocated: 10000, tokens_remaining: 9500, is_enabled: true }
 
 //==============================================
-//LAB 4 EXTENSION: Multi-Message Chat Feature
+//LAB 4 EXTENSION: Array to store the conversation history
 //==============================================
+let conversationHistory = []; 
 
-let conversationHistory = []; // Array to store the conversation history
 
 // STEP 1: Store the API configuration
 // STEP 2: Set the base URL for the Claude API
 const baseURL = "https://georgian.polaristechservices.com";
 // STEP 3: Set your student API key (student ID)
-const studentApiKey = "";
+const studentApiKey = "200640675";
 // STEP 4: Set the maximum tokens for API requests
 const maxTokens = 1000;
 
@@ -30,6 +30,13 @@ const userMessage = document.querySelector("#user-message");
 const sendMessageBtn = document.querySelector("#send-message");
 const checkUsageBtn = document.querySelector("#check-usage");
 const results = document.querySelector("#results");
+
+//==============================================
+// LAB 4 EXTENSION: Reference the follow-up message elements
+//==============================================
+const followUpMessage = document.querySelector("#follow-up-message");
+const sendFollowUpBtn = document.querySelector("#send-follow-up");
+const followUpSection = document.querySelector("#follow-up");
 
 /* STEP 6: Add event listeners for all interactive elements */
 // STEP 6a: Send message button
@@ -80,14 +87,15 @@ function sendChatMessage(){
     // STEP 8a: Get form values
     let userInput = userMessage.value;
 
-    //============================================
-    // LAB 4 EXTENSION: Multi-Message Chat Feature
-    //============================================
-    // Add user's message to the conversation history
+
+    //================================================================
+    // LAB 4 EXTENSION: Add user's message to the conversation history
+    //================================================================
     conversationHistory.push({
         role: "user",
         content: userInput
     });
+
 
     // STEP 8b: Create complete url
     let url = `${baseURL}/api/claude/messages`;
@@ -118,13 +126,33 @@ function sendChatMessage(){
     })
     .then(json => {
         displayMessage(json);
-    })
-//========================================
-//LAB 4 EXTENSION: store first return
-//========================================
-    conversationHistory.push ({
+
+        //===============================================================
+        // LAB 4 EXTENSION: Claude response added toconversation history
+        //===============================================================
+        conversationHistory.push({
+            role: "assistant",
+            content: json.content[0].text
+        });
+
+        //===============================================================
+        // LAB 4 EXTENSION: Show follow-up message section after receiving Claude's response
+        //===============================================================
+        followUpSection.style.display = "block";
+       
+    });
+}
+
+//==============================================================
+// LAB 4 EXTENSION: Send follow-up message to Claude
+//==============================================================
+function sendFollowUpMessage(){
+    let followUpText = followUpMessage.value;
+
+    // Add user's follow-up to history
+    conversationHistory.push({
         role: "user",
-        content: json.cotent[0].text
+        content: followUpText
     });
 }
 
@@ -136,6 +164,76 @@ function displayMessage(json){
     para.textContent = json.content[0].text;
     results.appendChild(para);
 }
+//==============================================================
+// LAB 4 EXTENSION: Send follow-up message to Claude
+//==============================================================
+function sendFollowUpMessage(){
+    let followUpText = followUpMessage.value;
+
+    // Add user's follow-up to history
+    conversationHistory.push({
+        role: "user",
+        content: followUpText
+    });
+
+    let url = `${baseURL}/api/claude/messages`;
+
+    let body = {
+        "model": "claude-haiku-4-5",
+        "max_tokens": maxTokens,
+        "messages": conversationHistory
+    };
+
+    fetch(url, {
+        method: "POST",
+        headers: {
+            "X-Student-API-Key": studentApiKey,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+    .then(response => response.json())
+    .then(json => {
+
+        //===============================================================
+        // LAB 4 EXTENSION: Add Claude's follow-up response to history
+        //===============================================================
+        conversationHistory.push({
+            role: "assistant",
+            content: json.content[0].text
+        });
+
+        displayFollowUp(json);
+    });
+}
+
+//==============================================================
+// LAB 4 EXTENSION: Display follow-up response differently
+//==============================================================
+function displayFollowUp(json){
+    let box = document.createElement("div");
+    box.style.backgroundColor = "#eef";
+    box.style.padding = "10px";
+    box.style.marginTop = "10px";
+    box.style.borderLeft = "4px solid #66f";
+
+    box.textContent = "Claude (follow-up): " + json.content[0].text;
+
+    results.appendChild(box);
+}
+
+// LAB EXTENSION: Multi-Message Chat Feature
+// After completing the basic implementation, extend the functionality to support conversation history:
+
+/* LAB STEP 1: Modify sendChatMessage to use conversation history */
+// - Add the user's message to conversationHistory
+// - Send the entire conversation to the API instead of just the current message
+// - Add Claude's response to conversationHistory
+
+/* LAB STEP 2: Update the displayResult function for chat-like appearance */
+// - Show messages in a conversation format
+// - Display user and Claude messages differently
+// - Show conversation flow clearly
 
 // LAB EXTENSION: Multi-Message Chat Feature
 // After completing the basic implementation, extend the functionality to support conversation history:
