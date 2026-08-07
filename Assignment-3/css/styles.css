@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #ceefb5;
+    background-color: #d9c3dc;
 }
 
 h1 {
@@ -43,10 +43,8 @@ h1 {
 .art-year {
     color: #777;
 }
-/*New descrips added*/
-.art-medium,
-.art-dimensions,
-.art-culture {
+
+.art-medium {    
     color: #555;
     margin: 4px 0;
 }
