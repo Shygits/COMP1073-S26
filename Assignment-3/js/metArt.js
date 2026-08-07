@@ -59,11 +59,6 @@ function displayArtwork(data) {
     medium.classList.add("art-medium");
     medium.textContent = "Medium: " + data.medium;
 
-    //CULTURE
-    let culture = document.createElement("p");
-    culture.classList.add("art-culture");
-    culture.textContent = "Culture: " + data.culture;
-
     // MET PAGE LINK
     let link = document.createElement("a");
     link.href = data.objectURL;
@@ -81,7 +76,6 @@ function displayArtwork(data) {
     card.appendChild(artist);
     card.appendChild(year);
     card.appendChild(medium);
-    card.appendChild(culture);
     card.appendChild(link);
 
     // Add card to page
