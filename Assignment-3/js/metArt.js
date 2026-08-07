@@ -6,7 +6,7 @@ studentInfo.textContent = "Student: Shy-Anna | ID: 200640675";
 let artContainer = document.querySelector("#art-container");
 
 
-//Monet and Van Gogh object IDs randomly slected 10 of each from the Met Museum API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=monet AND https://collectionapi.metmuseum.org/public/collection/v1/search?q=van%20gogh/
+//Object IDs randomly slected 10 of each from the Met Museum API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=monet AND https://collectionapi.metmuseum.org/public/collection/v1/search?q=van%20gogh/
 
 //MONET OBJECT IDS
 const fullArtIDs = [ 
