@@ -6,6 +6,37 @@ studentInfo.textContent = "Student: Shy-Anna | ID: 200640675";
 let artContainer = document.querySelector("#art-container");
 
 
+//Monet and Van Gogh object IDs randomly slected 10 of each from the Met Museum API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=van%20gogh AND https://collectionapi.metmuseum.org/public/collection/v1/search?q=van%20gogh
+
+//MONET OBJECT IDS
+const fullMonetIDs = [ 
+    437127, 
+    438003, 
+    437135, 
+    437133, 
+    437125, 
+    438004, 
+    437131, 
+    438008, 
+    437112, 
+    437137  
+];
+
+//VAN GOGH OBJECT IDS
+const fullVanGoghIDs = [
+    849055,
+    393458,
+    438821,
+    626268,
+    337826,
+    209020,
+    436122,
+    437347,
+    436946,
+    276299
+]
+
+
 // Function to fetch artwork data from the Met Museum API
 function fetchArtwork(objectID) {
 let url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`;
@@ -25,8 +56,8 @@ function displayArtwork(data) {
     card.classList.add("art-card");
 
     //creates image element
-    let img =  document.createElement("img");
-    img.src = data.primaryImage;
+    let img = document.createElement("img");
+    img.src = data.primaryImageSmall;
     img.alt = data.title;
 
     //TITLE
@@ -55,3 +86,8 @@ function displayArtwork(data) {
 }
 
 // Fetch and display artworks for the given object IDs
+// Van Gogh Starry NightobjectID
+fetchArtwork(436533); // "Starry Night"
+
+// Monet  objectID
+fetchArtwork(76559); // "The Path through the Irises"
