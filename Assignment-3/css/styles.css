@@ -1,0 +1,21 @@
+/* Basic Page Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fafafa;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: rgb(29, 3, 50);
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(29, 3, 50);
+}
+
