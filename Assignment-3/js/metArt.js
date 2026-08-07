@@ -14,7 +14,7 @@ const fullArtIDs = [
 ];
 
 
-// Function to fetch artwork data from the Met Museum API
+// Function to fetch artwork data from the Met Museum API ---Further info found here: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 function fetchArtwork(objectID) {
     let url = `https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`;
 
@@ -32,7 +32,7 @@ function fetchArtwork(objectID) {
 //Display art in a card
 function displayArtwork(data) {
 
-    //Clear previous artwork
+    //Clear previous artwork- more info  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model 
     artContainer.innerHTML = "";
 
     //creates card container
@@ -70,7 +70,7 @@ function displayArtwork(data) {
     year.classList.add("art-year");
     year.textContent = "Year: " + data.objectDate;
     
-    // ADD ELEMENTS TO CARD
+    // ADD ELEMENTS TO CARD  
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(artist);
