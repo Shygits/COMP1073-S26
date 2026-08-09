@@ -2,13 +2,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #1e0e25;
+    background-color: #054d30;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: rgb(71, 7, 234);
+    color: rgb(81, 3, 25);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -67,7 +67,7 @@ h1 {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: rgb(71, 7, 234);;
+    background-color: rgb(81, 3, 25);
     color: white;
     border: none;
     border-radius: 8px;
@@ -83,6 +83,6 @@ footer {
 
 footer a {
     color: rgb(161, 83, 224);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
