@@ -2,13 +2,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #d9c3dc;
+    background-color: #1e0e25;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 40px;
-    color: rgb(29, 3, 50);
+    color: rgb(71, 7, 234);
     font-weight: bold;
     text-decoration: underline;
 }
@@ -32,6 +32,7 @@ h1 {
 }
 
 .art-title {
+    color: rgb(8, 8, 68);
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -48,17 +49,13 @@ h1 {
     color: #555;
     margin: 4px 0;
 }
-art-card a {
+.art-card, a {
     display: inline-block;
     margin-top: 10px;
-    color: #4a2c6b;
+    color: #4a2c6b;;
     font-weight: bold;
-    text-decoration: none;
 }
 
-.art-card a:hover {
-    text-decoration: underline;
-}
 #art-container {
     display: flex;
     justify-content: center;
@@ -70,7 +67,7 @@ art-card a {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #4a2c6b;
+    background-color: rgb(71, 7, 234);;
     color: white;
     border: none;
     border-radius: 8px;
@@ -78,10 +75,14 @@ art-card a {
     font-size: 1em;
 }
 
-
 footer {
     text-align: center;
     margin-top: 40px;
-    color: rgb(29, 3, 50);
+    color: rgb(218, 249, 44);;
+}
+
+footer a {
+    color: rgb(161, 83, 224);
+    text-decoration: none;
 }
 
