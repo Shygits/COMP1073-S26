@@ -35,7 +35,7 @@ function displayArtwork(data) {
     //Clear previous artwork- more info  https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model 
     artContainer.innerHTML = "";
 
-    //creates card container
+    //creates card container.
     let card = document.createElement("div");
     card.classList.add("art-card");
 

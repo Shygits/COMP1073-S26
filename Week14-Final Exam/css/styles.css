@@ -1,0 +1,13 @@
+body {
+    color: orange;
+}
+
+h1 {
+    text-align: center;
+}
+
+p{
+    font-weight: bold;
+    text-align: center;
+    color:rgb(74, 26, 119);
+}
